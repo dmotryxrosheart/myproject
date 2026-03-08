@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My First Website</title>
+<title>DMO Shop</title>
 </head>
+
 <body>
 
-<h1>Hello World</h1>
-<p>This is my first website on GitHub.</p>
-<h2>About Me</h2>
-<p>My name is DMO. I'm learning Git and web development.</p>
-<h2>I Love Laila</h3>
-<p>I'm just kindding.</p>
+<h1>DMO Shop</h1>
+
+<h2>Products</h2>
+
+<p>Black T-Shirt - 299฿</p>
+<button onclick="addItem(299)">Buy</button>
+
+<p>Cap - 199฿</p>
+<button onclick="addItem(199)">Buy</button>
+
+<h2>Cart</h2>
+
+<p>Total: <span id="total">0</span> ฿</p>
+
+<h2>Customer Info</h2>
+
+<input placeholder="Your name"><br><br>
+<textarea placeholder="Address"></textarea><br><br>
+
+<button onclick="order()">Order</button>
+
+<script>
+
+let total = 0;
+
+function addItem(price){
+ total += price;
+ document.getElementById("total").innerText = total;
+}
+
+function order(){
+ alert("Order received. Please send payment slip via LINE.");
+}
+
+</script>
+
 </body>
-</html>
+</html> 
